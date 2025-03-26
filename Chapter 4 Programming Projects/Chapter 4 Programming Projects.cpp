@@ -13,9 +13,9 @@ bool LeapYear(int Year) {
 
 int main()
 {
-	float Month;
-	float Year;
-	float DaysInMonth;
+	int Month;
+	int Year;
+	int DaysInMonth;
 
    cout << "Enter a month (1-12):\n";
    cin >> Month;
