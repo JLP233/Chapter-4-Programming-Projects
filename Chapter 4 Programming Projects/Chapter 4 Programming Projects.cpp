@@ -12,6 +12,8 @@ using namespace std;
 
 int main()
 {
+	int FunctionChoice;
+	float AreaOfShape;
 	float CircleRadius;
 	float RectangleLength;
 	float RectangleWidth;
@@ -25,46 +27,47 @@ int main()
    cout << "3. Calculate the Area of a Triangle\n";
    cout << "4. Quit\n";
    cout << "Enter your choice(1–4) :\n";
+   cin >> FunctionChoice;
 
-   
-
-   if ( MilesToBeShipped >= 10 && MilesToBeShipped <= 3000)
+  
+   if (FunctionChoice == 1)
    {
-	   TotalMileageRateMultipler = (ceil(MilesToBeShipped / 500));
-   }
-   else {
-	   cout << "Please enter a mileage over 10 and under 3000.";
-	   return 1;
+	   cout << "Calculate the Area of a Circle\n";
+	   cout << "Enter circle radius:\n";
+	   cin >> CircleRadius;
+	   AreaOfShape = CircleRadius * CircleRadius * 3.14159;
    }
 
-   if (PackageWeight <= 2 && PackageWeight >= 0)
+   else if (FunctionChoice == 2)
    {
-	   TotalCostToShip = TotalMileageRateMultipler * 1.1;
+	   cout << "Calculate the Area of a Rectangle\n";
+	   cout << "Enter rectangle length:\n";
+	   cin >> RectangleLength;
+	   cout << "Enter rectangle width:\n";
+	   cin >> RectangleWidth; 
+	   AreaOfShape = RectangleLength * RectangleWidth;
    }
-   else if (PackageWeight >= 2 && PackageWeight <= 6)
+
+   else if (FunctionChoice == 3)
    {
-	   TotalCostToShip = TotalMileageRateMultipler * 2.2;
+	   cout << "Calculate the Area of a Triangle\n";
+	   cout << "Enter triangle base length:\n";
+	   cin >> TriangleBase;
+	   cout << "Enter triangle height:\n";
+	   cin >> TriangleHeight;
+	   AreaOfShape = TriangleBase * TriangleHeight * .5;
    }
-   else if (PackageWeight >= 6 && PackageWeight <= 10)
+
+   else if (FunctionChoice == 4)
    {
-	   TotalCostToShip = TotalMileageRateMultipler * 3.7;
+	   cout << "Goodbye";
    }
-   else if (PackageWeight >= 10 && PackageWeight <= 20)
+
+   else 
    {
-	   TotalCostToShip = TotalMileageRateMultipler * 4.8;
+	   cout << "Invalid selection. Please pick an option 1-4.\n";
+	   
    }
-   else {
-	   cout << "Package exceeds 20kg weight limit." << endl;
-	   return 1;
-   }
-
-   
-   cout << "Total Cost to Ship: \n";
-   cout << "$";
-   cout << setprecision(2) << TotalCostToShip;
-
-
-
 
    return 0;
 }
