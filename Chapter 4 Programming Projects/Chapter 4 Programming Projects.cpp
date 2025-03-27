@@ -61,6 +61,7 @@ int main()
    else if (FunctionChoice == 4)
    {
 	   cout << "Goodbye";
+	   return 0;
    }
 
    else 
