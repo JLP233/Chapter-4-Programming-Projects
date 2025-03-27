@@ -26,7 +26,7 @@ int main()
    cout << "2. Calculate the Area of a Rectangle\n";
    cout << "3. Calculate the Area of a Triangle\n";
    cout << "4. Quit\n";
-   cout << "Enter your choice(1–4) :\n";
+   cout << "Enter your choice(1-4):\n";
    cin >> FunctionChoice;
 
   
@@ -68,6 +68,9 @@ int main()
 	   cout << "Invalid selection. Please pick an option 1-4.\n";
 	   
    }
+
+   cout << "Area of shape:\n";
+   cout << AreaOfShape;
 
    return 0;
 }
