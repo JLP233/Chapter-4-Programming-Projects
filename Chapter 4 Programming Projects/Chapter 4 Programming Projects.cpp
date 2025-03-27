@@ -35,7 +35,16 @@ int main()
 	   cout << "Calculate the Area of a Circle\n";
 	   cout << "Enter circle radius:\n";
 	   cin >> CircleRadius;
-	   AreaOfShape = CircleRadius * CircleRadius * 3.14159;
+	   if (CircleRadius >= 0)
+	   {
+		   AreaOfShape = CircleRadius * CircleRadius * 3.14159;
+	   }
+
+	   else
+	   {
+		   cout << "Input Error.You must enter a positive value.\n";
+		   return 1;
+	   }
    }
 
    else if (FunctionChoice == 2)
@@ -45,7 +54,16 @@ int main()
 	   cin >> RectangleLength;
 	   cout << "Enter rectangle width:\n";
 	   cin >> RectangleWidth; 
-	   AreaOfShape = RectangleLength * RectangleWidth;
+	   if (RectangleLength <= 0 || RectangleWidth <= 0)
+	   {
+		   cout << "Input Error.You must enter a positive value.\n";
+		   return 1;
+	   }
+		   
+	   else
+	   {
+		   AreaOfShape = RectangleLength * RectangleWidth;
+	   }
    }
 
    else if (FunctionChoice == 3)
@@ -55,7 +73,15 @@ int main()
 	   cin >> TriangleBase;
 	   cout << "Enter triangle height:\n";
 	   cin >> TriangleHeight;
-	   AreaOfShape = TriangleBase * TriangleHeight * .5;
+	   if (TriangleBase <= 0 || TriangleHeight <= 0)
+	   {
+		   cout << "Input Error.You must enter a positive value.\n";
+	   }
+
+	   else
+	   {
+		   AreaOfShape = TriangleBase * TriangleHeight * .5;
+	   }
    }
 
    else if (FunctionChoice == 4)
