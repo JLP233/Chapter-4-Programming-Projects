@@ -1,6 +1,6 @@
 // Chapter 4 Programming Projects.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-// This code calculates the shipping charges of packages based on parcel weight (kg) and shipping distance in miles.
+// This code calculates the area of various shapes listed in the options menu.
 
 
 #include <iostream>
