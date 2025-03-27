@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
 	int FunctionChoice;
-	double AreaOfShape; 
+	double AreaOfShape = 0.0f;
 	float CircleRadius;
 	float RectangleLength;
 	float RectangleWidth;
