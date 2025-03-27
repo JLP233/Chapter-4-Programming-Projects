@@ -12,16 +12,21 @@ using namespace std;
 
 int main()
 {
-	float PackageWeight;
-	float MilesToBeShipped;
-	int TotalMileageRateMultipler;
-	float TotalCostToShip;
+	float CircleRadius;
+	float RectangleLength;
+	float RectangleWidth;
+	float TriangleBase;
+	float TriangleHeight;
 
 	
-   cout << "Enter package weight (kg):\n";
-   cin >> PackageWeight;
-   cout << "Enter number of miles package needs to be shipped (mi):\n";
-   cin >> MilesToBeShipped;
+   cout << "Geometry Calculator:\n";
+   cout << "1. Calculate the Area of a Circle\n";
+   cout << "2. Calculate the Area of a Rectangle\n";
+   cout << "3. Calculate the Area of a Triangle\n";
+   cout << "4. Quit\n";
+   cout << "Enter your choice(1–4) :\n";
+
+   
 
    if ( MilesToBeShipped >= 10 && MilesToBeShipped <= 3000)
    {
