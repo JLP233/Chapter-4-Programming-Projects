@@ -4,6 +4,7 @@
 
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -41,9 +42,12 @@ int main()
 	   return 1;
    }
 
+   
+   cout << "Total Cost to Ship: \n";
+   cout << "$";
+   cout << setprecision(2) << TotalCostToShip;
 
-   cout << "Total Cost to Ship";
-   cout << "$" << TotalCostToShip;
+
 
 
    return 0;
