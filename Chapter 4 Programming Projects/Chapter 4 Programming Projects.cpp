@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int main()
 {
 	float PackageWeight;
 	float MilesToBeShipped;
+	int TotalMileageRateMultipler;
 	float TotalCostToShip;
 
 	
@@ -21,21 +23,30 @@ int main()
    cout << "Enter number of miles package needs to be shipped (mi):\n";
    cin >> MilesToBeShipped;
 
+   if ( MilesToBeShipped >= 10 && MilesToBeShipped <= 3000)
+   {
+	   TotalMileageRateMultipler = (ceil(MilesToBeShipped / 500));
+   }
+   else {
+	   cout << "Please enter a mileage over 10 and under 3000.";
+	   return 1;
+   }
+
    if (PackageWeight <= 2 && PackageWeight >= 0)
    {
-	   TotalCostToShip = MilesToBeShipped * 1.1;
+	   TotalCostToShip = TotalMileageRateMultipler * 1.1;
    }
    else if (PackageWeight >= 2 && PackageWeight <= 6)
    {
-	   TotalCostToShip = MilesToBeShipped * 2.2;
+	   TotalCostToShip = TotalMileageRateMultipler * 2.2;
    }
    else if (PackageWeight >= 6 && PackageWeight <= 10)
    {
-	   TotalCostToShip = MilesToBeShipped * 3.7;
+	   TotalCostToShip = TotalMileageRateMultipler * 3.7;
    }
    else if (PackageWeight >= 10 && PackageWeight <= 20)
    {
-	   TotalCostToShip = MilesToBeShipped * 4.8;
+	   TotalCostToShip = TotalMileageRateMultipler * 4.8;
    }
    else {
 	   cout << "Package exceeds 20kg weight limit." << endl;
