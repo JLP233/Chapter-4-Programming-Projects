@@ -22,19 +22,19 @@ int main()
 
    if (PackageWeight <= 2 && PackageWeight >= 0)
    {
-	   MilesToBeShipped * 1.1 = TotalCostToShip;
+	   TotalCostToShip = MilesToBeShipped * 1.1;
    }
    else if (PackageWeight >= 2 && PackageWeight <= 6)
    {
-	   MilesToBeShipped * 2.2 = TotalCostToShip;
+	   TotalCostToShip = MilesToBeShipped * 2.2;
    }
    else if (PackageWeight >= 6 && PackageWeight <= 10)
    {
-	   MilesToBeShipped * 3.7 = TotalCostToShip;
+	   TotalCostToShip = MilesToBeShipped * 3.7;
    }
    else if (PackageWeight >= 10 && PackageWeight <= 20)
    {
-	   MilesToBeShipped * 4.8 = TotalCostToShip;
+	   TotalCostToShip = MilesToBeShipped * 4.8;
    }
    else {
 	   cout << "Package exceeds 20kg weight limit." << endl;
